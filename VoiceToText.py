@@ -1,26 +1,10 @@
 
 
-
-
-
 import speech_recognition as sr
-import pyttsx3
  
 # Initialize the recognizer
 r = sr.Recognizer()
  
-# Function to convert text to
-# speech
-def SpeakText(command):
-     
-    # Initialize the engine
-    engine = pyttsx3.init()
-    engine.say(command)
-    engine.runAndWait()
-     
-     
-# Loop infinitely for user to
-# speak
  
 while(1):   
      
@@ -44,7 +28,7 @@ while(1):
             MyText = MyText.lower()
  
             print("Did you say ",MyText)
-            SpeakText(MyText)
+
              
     except sr.RequestError as e:
         print("Could not request results; {0}".format(e))
